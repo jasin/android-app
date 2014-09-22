@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="androidapp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Todo</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <!--<script src="js/math.min.js"></script>-->
+  </head>
+  <body>
+    <ion-nav-bar class="bar-dark" animation="">
+      <ion-nav-back-button class="button-icon"></ion-nav-back-button>
+    </ion-nav-bar>
+
+    <ion-nav-view animation="no-animation"></ion-nav-view>
+
+    <script id="index" type="text/ng-template">
+      <ion-nav-buttons side="right">
+        <button class="button">Search</button>
+      </ion-nav-buttons>
+      <ion-view title="Index" ng-controller="formulaListCtrl">
+        <ion-content class="padding">
+          <ion-list ng-repeat="formula in formulas">
+            <ion-item ng-click="load(formula.url)">{{formula.formula}}</ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script id="Angle_Sine_Bar" type="text/ng-template">
+      <ion-view title="Angle Sine Bar">
+        <ion-content class="padding">
+           
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script id="Bolt_Circle" type="text/ng-template">
+      <ion-view title="Bolt Circle">
+        <ion-content class="padding">
+               
+          </ion-content>
+        </ion-view>
+    </script>
+
+    <script id="Right_Triangle_Measurements" type="text/ng-template">
+      <ion-view title="Right Triangle Measurments">
+        <ion-content class="padding">
+               
+        </ion-content>
+      </ion-view>
+    </script>
+
+    <script id="Tap_Drill_Sizes" type="text/ng-template">
+      <ion-view title="Tap Drill Sizes">
+        <ion-content class="padding">
+               
+        </ion-content>
+      </ion-view>
+    </script>
+  </body>
+</html>
